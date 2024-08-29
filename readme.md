@@ -33,11 +33,12 @@
 	>>* mxbai-embed-large: ollama pull mxbai-embed-large
 	
 	>>* llama3.1: ollama pull llama3.1
-		
+
+* change the db password in the rag.py and uploaded_files.py
 
 * streamlit
 
 	https://docs.streamlit.io/get-started/installation
 
->* streamlit run rag.py
->* streamlit run upload_files.py
+	>* streamlit run rag.py
+	>* streamlit run upload_files.py
