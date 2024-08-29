@@ -29,7 +29,7 @@
 
 	>* models to pull
 
-		>>* mxbai-embed-large: ollama pull mxbai-embed-large
-		
-		>>* llama3.1: ollama pull llama3.1
+	>>* mxbai-embed-large: ollama pull mxbai-embed-large
+	
+	>>* llama3.1: ollama pull llama3.1
 		
