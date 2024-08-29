@@ -1,4 +1,4 @@
-# install the below dependecies
+# install the below dependencies
 -----------------
 * postgresql
 * pgvector extension
