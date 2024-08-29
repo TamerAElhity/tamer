@@ -20,6 +20,7 @@
 * langchain_core
 
 	https://pypi.org/project/langchain-core/
+	
 
 * ollama
 
@@ -33,3 +34,10 @@
 	
 	>>* llama3.1: ollama pull llama3.1
 		
+
+* streamlit
+
+	https://docs.streamlit.io/get-started/installation
+
+>* streamlit run rag.py
+>* streamlit run upload_files.py
