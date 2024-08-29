@@ -1,14 +1,16 @@
-install the below dependecies
+# install the below dependecies
 -----------------
-postgresql
-pgvector extension
+*postgresql
+*pgvector extension
 
-python3
-pip
+*python3
+*pip
 
-psycopg2				:		https://pypi.org/project/psycopg2/
-langchain				: 		https://pypi.org/project/langchain/
-langchain_text_splitters:		https://pypi.org/project/langchain-text-splitters/
+*psycopg2
+**https://pypi.org/project/psycopg2/
+
+*langchain				: 		https://pypi.org/project/langchain/
+*langchain_text_splitters:		https://pypi.org/project/langchain-text-splitters/
 langchain_core			:		https://pypi.org/project/langchain-core/
 ollama
 	- Ollama Python Library: https://pypi.org/project/ollama/
