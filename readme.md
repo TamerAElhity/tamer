@@ -23,13 +23,13 @@
 
 * ollama
 
-	>>* Ollama Python Library: https://pypi.org/project/ollama/
+	>* Ollama Python Library: https://pypi.org/project/ollama/
 
-	>>* ollama service: https://ollama.com/download and/or https://github.com/ollama/ollama
+	>* ollama service: https://ollama.com/download and/or https://github.com/ollama/ollama
 
-	>>* models to pull
+	>* models to pull
 
-		>>>* mxbai-embed-large: ollama pull mxbai-embed-large
+		>>* mxbai-embed-large: ollama pull mxbai-embed-large
 		
-		>>>* llama3.1: ollama pull llama3.1
+		>>* llama3.1: ollama pull llama3.1
 		
