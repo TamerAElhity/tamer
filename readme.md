@@ -34,6 +34,16 @@
 	
 	>>* llama3.1: ollama pull llama3.1
 
+* others
+
+>>* pip install pdfplumber
+
+>>* pip install langchain_community
+
+>>* pip install pypdf
+
+>>* pip install tiktoken
+
 * change the db password in the rag.py and uploaded_files.py
 
 * streamlit
