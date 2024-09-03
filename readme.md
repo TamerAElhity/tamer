@@ -43,5 +43,5 @@ Install the below
 
 Run the streamlit application
 
-	>* streamlit run rag2.py
-	>* streamlit run upload_files2.py
+	streamlit run rag2.py
+	streamlit run upload_files2.py
