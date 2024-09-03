@@ -36,9 +36,9 @@ Install the below
 
 
 
-* change the db password in the rag.py and uploaded_files.py
+* change the db password in the rag2.py and uploaded_files2.py
 
-* streamlit
+* streamlit (pip install streamlit)
 
 	https://docs.streamlit.io/get-started/installation
 
