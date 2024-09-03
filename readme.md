@@ -1,26 +1,25 @@
 # install the below dependencies
 -----------------
-* postgresql
-* pgvector extension
+* install postgresql
+* create database named "testdb" install pgvector and PL/Python extensions
+* run process_files_in_directory.sql and augmented_response.sql to create PL/Python functions on testdb
 * python3
 * pip
-
-* psycopg2
+* psycopg2 (pip install psycopg2)
 
 	https://pypi.org/project/psycopg2/
 
-* langchain
+* langchain (pip install langchain)
 
 	https://pypi.org/project/langchain/
 
-* langchain_text_splitters
+* langchain_text_splitters (pip install langchain-text-splitters)
 
 	https://pypi.org/project/langchain-text-splitters/
 
-* langchain_core
+* tiktoken (pip install tiktoken)
 
-	https://pypi.org/project/langchain-core/
-	
+	https://pypi.org/project/tiktoken/
 
 * ollama
 
@@ -34,15 +33,7 @@
 	
 	>>* llama3.1: ollama pull llama3.1
 
-* others
 
->>* pip install pdfplumber
-
->>* pip install langchain_community
-
->>* pip install pypdf
-
->>* pip install tiktoken
 
 * change the db password in the rag.py and uploaded_files.py
 
@@ -50,5 +41,5 @@
 
 	https://docs.streamlit.io/get-started/installation
 
-	>* streamlit run rag.py
-	>* streamlit run upload_files.py
+	>* streamlit run rag2.py
+	>* streamlit run upload_files2.py
