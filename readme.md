@@ -1,7 +1,8 @@
 # install the below dependencies
 -----------------
-* install postgresql
-* create database named "testdb" install pgvector and PL/Python extensions
+Install the below 
+* postgresql
+* create database named "testdb" and install pgvector and PL/Python extensions
 * run process_files_in_directory.sql and augmented_response.sql to create PL/Python functions on testdb
 * python3
 * pip
