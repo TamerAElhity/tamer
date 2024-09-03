@@ -2,9 +2,9 @@
 -----------------
 Install the below 
 * postgresql
-* create database named "testdb" and install pgvector and PL/Python extensions
-* change the db username and password in the rag2.py and uploaded_files2.py
-* run process_files_in_directory.sql and augmented_response.sql to create PL/Python functions on testdb
+	>* create database named "testdb" and install pgvector and PL/Python extensions
+	>* change the db username and password in the rag2.py and uploaded_files2.py
+	>* run process_files_in_directory.sql and augmented_response.sql to create PL/Python functions on testdb
 * python3
 * pip
 * psycopg2 (pip install psycopg2)
