@@ -3,6 +3,7 @@
 Install the below 
 * postgresql
 * create database named "testdb" and install pgvector and PL/Python extensions
+* change the db username and password in the rag2.py and uploaded_files2.py
 * run process_files_in_directory.sql and augmented_response.sql to create PL/Python functions on testdb
 * python3
 * pip
@@ -22,6 +23,11 @@ Install the below
 
 	https://pypi.org/project/tiktoken/
 
+
+* streamlit (pip install streamlit)
+
+	https://docs.streamlit.io/get-started/installation
+
 * ollama
 
 	>* Ollama Python Library: https://pypi.org/project/ollama/
@@ -35,12 +41,7 @@ Install the below
 	>>* llama3.1: ollama pull llama3.1
 
 
-
-* change the db password in the rag2.py and uploaded_files2.py
-
-* streamlit (pip install streamlit)
-
-	https://docs.streamlit.io/get-started/installation
+Run the streamlit application
 
 	>* streamlit run rag2.py
 	>* streamlit run upload_files2.py
