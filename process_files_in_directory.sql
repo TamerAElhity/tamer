@@ -111,7 +111,7 @@ for filename in file_list:
 					#**************in PGVector table ***************************
 					#***********************************************************
 					
-					response = model.embeddings(model="mxbai-embed-large", prompt=chunk)
+					response = model.embeddings(model="mxbai-embed-large", prompt=chunk) #zephyr:7b
 					embedding = response["embedding"]
 					content_utf8 = chunk.encode('utf-8', 'ignore').decode('utf-8')
 					plpy.execute(insert_plan, [content_utf8, embedding, filename])

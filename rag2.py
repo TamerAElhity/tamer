@@ -49,13 +49,13 @@ def ollama_models():
 #    st.session_state['conn'] = psycopg2.connect(user="postgres",password="edb",host=_db_ip,port=5432,database="testdb")
 
 
-def get_augemented_answer(_selected_dataset,_user_question,_selected_model):
+def get_augemented_answer(_selected_dataset,_user_question,_selected_model,_question_to_model):
     _response=''
-    st.sidebar.write(f"PGVector Query --> :green[select augmented_response('{_selected_dataset}','{_user_question.strip()}','{_selected_model}')]")
+    st.sidebar.write(f"PG Query --> :green[select augmented_response('{_selected_dataset}','{_user_question.strip()}','{_selected_model}',{_question_to_model})]")
     
     with db_connect(False).cursor() as cur:
         time0 = time.time()
-        cur.execute(f"select augmented_response ('{_selected_dataset}','{_user_question.strip()}','{_selected_model}')")
+        cur.execute(f"select augmented_response ('{_selected_dataset}','{_user_question.strip()}','{_selected_model}',{_question_to_model})")
         
         time1=time.time()
         for row in cur.fetchall():
@@ -96,7 +96,7 @@ if st.session_state['db_ip'] != db_ip:
 if "messages" not in st.session_state:
     st.session_state.messages = []  
 
-st.sidebar.write(len(st.session_state.messages))
+#st.sidebar.write(len(st.session_state.messages))
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
@@ -106,7 +106,7 @@ selected_model = st.sidebar.selectbox("select model",ollama_models(),)
 
 st.sidebar.write(f"Model recommendations (:green[gemma2:2b , llama3.1:latest])")
 
-
+question_to_model = st.sidebar.checkbox('Question to the model')
         
 if db_connect(False).closed == 0:
     if (selected_dataset.strip() == "") or (selected_model.strip() == ""):
@@ -122,7 +122,7 @@ if db_connect(False).closed == 0:
                 st.session_state.messages.append({"role": "user", "content": user_question})              
             with st.chat_message("assistant"):
                 with st.spinner('Searching the local knowledgebase ...'):                           
-                    response = get_augemented_answer(selected_dataset,user_question,selected_model)                    
+                    response = get_augemented_answer(selected_dataset,user_question,selected_model,question_to_model)                    
                 # Display postgres response message in chat message container
                 st.write_stream(stream_data(response))
                 # Add assistant message to chat history
