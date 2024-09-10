@@ -109,10 +109,10 @@ st.sidebar.write(f"Model recommendations (:green[gemma2:2b , llama3.1:latest])")
 question_to_model = st.sidebar.checkbox('Question to the model')
         
 if db_connect(False).closed == 0:
-    if (selected_dataset.strip() == "") or (selected_model.strip() == ""):
+    if (isinstance(selected_dataset,str) and (selected_dataset.strip() == "") or (selected_model.strip() == "") and isinstance(selected_model,str)):
         st.sidebar.write(f":red[please choose dataset and llm model]")
         
-    if selected_dataset.strip() != "" and selected_model.strip() != "":
+    if isinstance(selected_dataset,str) and selected_dataset.strip() != "" and isinstance(selected_model,str) and selected_model.strip() != "":
         # Accept user input
         if user_question := st.chat_input("What's on your mind?"):
             with st.chat_message("user"):                               
