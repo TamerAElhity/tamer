@@ -23,6 +23,8 @@ Install the below
 
 	https://pypi.org/project/tiktoken/
 
+* pdfplumber
+pip install pdfplumber
 
 * streamlit (pip install streamlit)
 
